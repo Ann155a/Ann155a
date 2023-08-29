@@ -3,7 +3,7 @@ Anissa</a></h1>
 <h3 align="center">A passionate Statistics & Data Science Student</h3>
 
 <a target="_blank" align="center">
-  <img align="right" top="500" height="300" width="400" alt="GIF" src="https://tenor.com/it/view/mimibubu-gif-24985072">
+  <img align="right" top="500" height="300" width="400" alt="GIF" src="https://tenor.com/it/view/using-the-computer-debbie-harper-harper-house-on-the-pc-typing-gif-26193289">
 </a>
 
 - 🔭 Focusing on implementing ML models

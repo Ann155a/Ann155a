@@ -10,7 +10,10 @@ Anissa</a></h1>
 
 - 🌱 I’m currently learning Data Science in R
 
-- 💬 Ask me about **Rstudio**
+- 😄 **I am open to**:
+
+- collaboration opportunities (anytime & anywhere & any type) 
+- research internships
 
 - 📫 How to reach me **anisabakiu1@icloud.com**
   

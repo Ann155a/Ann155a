@@ -3,7 +3,7 @@ Anissa</a></h1>
 <h3 align="center">A passionate Statistics & Data Science Student</h3>
 
 <a target="_blank" align="center">
-  <img align="right" top="500" height="300" width="400" alt="GIF" src="https://iconscout.com/lottie/programmer-6540746">
+  <img align="right" top="500" height="300" width="400" alt="GIF" src="https://tenor.com/it/view/programming-gif-25868426">
 </a>
 
 - 🔭 I’m currently working on ML models

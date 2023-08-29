@@ -14,7 +14,7 @@ Anisa</a></h1>
 	- collaboration opportunities (anywhere & any type)
 	- research internships
 
-- 📫 How to reach me **anisabakiu1@icloud.com**
+- 📫 _How to reach me_: **anisabakiu1@icloud.com**
   
 <h3 align="center" > <img src="https://media.giphy.com/media/iY8CRBdQXODJSCERIr/giphy.gif" width="30" height="30" style="margin-right: 10px;">Connect with me </h3>
 

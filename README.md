@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm <a href="https://github.com/Ann155a" target="blank">
-Anissa</a></h1>
+Anisa</a></h1>
 <h3 align="center">A passionate Statistics & Data Science Student</h3>
 
 <a target="_blank" align="center">

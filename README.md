@@ -6,7 +6,7 @@ Anissa</a></h1>
   <img align="right" top="500" height="300" width="400" alt="GIF" src="https://tenor.com/it/view/mimibubu-gif-24985072">
 </a>
 
-- 🔭 I’m currently working on ML models
+- 🔭 Focusing on implementing ML models
 
 - 🌱 I’m currently learning Data Science in R
 

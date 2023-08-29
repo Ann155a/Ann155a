@@ -11,7 +11,7 @@ Anissa</a></h1>
 - 🌱 I’m currently learning Data Science in R
 
 - 😄 **I am open to**:
-	- collaboration opportunities (anytime & anywhere & any type)
+	- collaboration opportunities (anywhere & any type)
 	- research internships
 
 - 📫 How to reach me **anisabakiu1@icloud.com**

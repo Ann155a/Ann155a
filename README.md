@@ -8,8 +8,8 @@ Anisa</a></h1>
 
 - 🔭 Focusing on implementing ML models
 
-- 🌱 I’m currently learning Data Science in R
-
+- 🌱 Studying Data Science
+  
 - 😄 **I am open to**:
 	- collaboration opportunities (anywhere & any type)
 	- research internships

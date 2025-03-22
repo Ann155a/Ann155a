@@ -6,7 +6,7 @@ Anisa</a></h1>
   <img align="right" top="500" height="300" width="400" alt="GIF" src="https://media.tenor.com/PP9v7VIs6R4AAAAd/scaler-create-impact.gif">
 </a>
 
-- 🔭 Focused on designing and implementing Machine Learning workflows
+- 🔭 Focused on designing and implementing ML models
 
 - 🌱 Studying Data Science
   

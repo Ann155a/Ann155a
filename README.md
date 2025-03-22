@@ -1,17 +1,17 @@
 <h1 align="center">Hi 👋, I'm <a href="https://github.com/Ann155a" target="blank">
 Anisa</a></h1>
-<h3 align="center">A passionate Statistics & Data Science Student</h3>
+<h3 align="center">A passionate Data Science Student</h3>
 
 <a target="_blank" align="center">
   <img align="right" top="500" height="300" width="400" alt="GIF" src="https://media.tenor.com/PP9v7VIs6R4AAAAd/scaler-create-impact.gif">
 </a>
 
-- 🔭 Focusing on implementing ML models
+- 🔭 Focused on designing and implementing Machine Learning workflows
 
 - 🌱 Studying Data Science
   
 - 😄 **I am open to**:
-	- collaboration opportunities (anywhere & any type)
+	- collaboration opportunities 
 	- research internships
 
 - 📫 _How to reach me_: **anisabakiu1@icloud.com**

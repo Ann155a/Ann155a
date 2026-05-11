@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" width="720" height="420">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&amp;display=swap');
+      text { font-family: 'JetBrains Mono', 'Courier New', monospace; font-size: 13px; }
+      .bg  { fill: #1a1b26; }
+      .bar { fill: #16161e; }
+      .blue   { fill: #7aa2f7; }
+      .green  { fill: #9ece6a; }
+      .purple { fill: #bb9af7; }
+      .yellow { fill: #e0af68; }
+      .red    { fill: #f7768e; }
+      .cyan   { fill: #7dcfff; }
+      .dim    { fill: #565f89; }
+      .white  { fill: #c0caf5; }
+
+      .cursor {
+        fill: #7aa2f7;
+        animation: blink 1s step-end infinite;
+      }
+      @keyframes blink { 50% { opacity: 0; } }
+
+      /* typing animations for prompt */
+      .t-prompt { animation: show 0s 0.4s both; }
+      .t-cmd    { animation: type-cmd 0.5s steps(8,end) 0.9s both; }
+
+      /* neofetch lines appear one by one */
+      .nf-l0  { animation: show 0s 1.8s both; }
+      .nf-l1  { animation: show 0s 1.87s both; }
+      .nf-l2  { animation: show 0s 1.94s both; }
+      .nf-l3  { animation: show 0s 2.01s both; }
+      .nf-l4  { animation: show 0s 2.08s both; }
+      .nf-l5  { animation: show 0s 2.15s both; }
+      .nf-l6  { animation: show 0s 2.22s both; }
+      .nf-l7  { animation: show 0s 2.29s both; }
+      .nf-l8  { animation: show 0s 2.36s both; }
+      .nf-l9  { animation: show 0s 2.43s both; }
+      .nf-l10 { animation: show 0s 2.50s both; }
+      .nf-l11 { animation: show 0s 2.57s both; }
+      .nf-l12 { animation: show 0s 2.64s both; }
+
+      .prompt2 { animation: show 0s 2.9s both; }
+      .cur2    { animation: show 0s 2.9s both, blink 1s step-end 2.9s infinite; }
+
+      @keyframes show { to { opacity: 1; } }
+      @keyframes type-cmd {
+        from { clip-path: inset(0 100% 0 0); }
+        to   { clip-path: inset(0 0% 0 0); }
+      }
+
+      .hidden { opacity: 0; }
+    </style>
+  </defs>
+
+  <!-- background -->
+  <rect width="720" height="420" rx="12" class="bg"/>
+
+  <!-- titlebar -->
+  <rect width="720" height="36" rx="0" class="bar"/>
+  <rect width="720" height="36" y="0" class="bar"/>
+  <rect x="0" y="0" width="720" height="12" rx="12" class="bar"/>
+  <circle cx="18" cy="18" r="6" fill="#f7768e"/>
+  <circle cx="36" cy="18" r="6" fill="#e0af68"/>
+  <circle cx="54" cy="18" r="6" fill="#9ece6a"/>
+  <text x="80" y="23" class="dim" font-size="12">anisa@arch: ~</text>
+  <!-- titlebar bottom border -->
+  <rect x="0" y="35" width="720" height="1" fill="#292e42"/>
+
+  <!-- PROMPT LINE -->
+  <g class="t-prompt hidden">
+    <text x="20" y="66" class="green">anisa@arch</text>
+    <text x="107" y="66" class="dim"> </text>
+    <text x="113" y="66" class="blue">~</text>
+    <text x="124" y="66" class="white"> $ </text>
+    <text x="147" y="66" class="white t-cmd">neofetch</text>
+  </g>
+
+  <!-- ARCH LOGO -->
+  <g class="nf-l0 hidden"><text x="20"  y="93"  class="blue">             .</text></g>
+  <g class="nf-l1 hidden"><text x="20"  y="115" class="blue">            / \</text></g>
+  <g class="nf-l2 hidden"><text x="20"  y="137" class="blue">           /   \</text></g>
+  <g class="nf-l3 hidden"><text x="20"  y="159" class="blue">          /^.   \</text></g>
+  <g class="nf-l4 hidden"><text x="20"  y="181" class="blue">         /  .-.  \</text></g>
+  <g class="nf-l5 hidden"><text x="20"  y="203" class="blue">        /  (   ) _\</text></g>
+  <g class="nf-l6 hidden"><text x="20"  y="225" class="blue">       / _.~   ~._^\</text></g>
+  <g class="nf-l7 hidden"><text x="20"  y="247" class="blue">      /.^         ^.\</text></g>
+
+  <!-- INFO LINES -->
+  <g class="nf-l0 hidden">
+    <text x="230" y="93" class="red">anisa</text>
+    <text x="275" y="93" class="dim">@</text>
+    <text x="286" y="93" class="red">arch</text>
+  </g>
+  <g class="nf-l1 hidden"><text x="230" y="115" class="dim">──────────────────────</text></g>
+  <g class="nf-l2 hidden">
+    <text x="230" y="137" class="blue">OS        </text><text x="332" y="137" class="dim">: </text><text x="345" y="137" class="white">Data Science Student</text>
+  </g>
+  <g class="nf-l3 hidden">
+    <text x="230" y="159" class="blue">Location  </text><text x="332" y="159" class="dim">: </text><text x="345" y="159" class="white">Rome, Italy</text>
+  </g>
+  <g class="nf-l4 hidden">
+    <text x="230" y="181" class="blue">Shell     </text><text x="332" y="181" class="dim">: </text>
+    <text x="345" y="181" class="green">Python</text><text x="393" y="181" class="dim"> · </text>
+    <text x="412" y="181" class="cyan">R</text><text x="423" y="181" class="dim"> · </text>
+    <text x="441" y="181" class="yellow">Scala</text>
+  </g>
+  <g class="nf-l5 hidden">
+    <text x="230" y="203" class="blue">Packages  </text><text x="332" y="203" class="dim">: </text><text x="345" y="203" class="white">sklearn · tidyverse · spark · QGIS</text>
+  </g>
+  <g class="nf-l6 hidden">
+    <text x="230" y="225" class="blue">WM        </text><text x="332" y="225" class="dim">: </text><text x="345" y="225" class="purple">Tableau · Jupyter · RStudio</text>
+  </g>
+  <g class="nf-l7 hidden">
+    <text x="230" y="247" class="blue">Focus     </text><text x="332" y="247" class="dim">: </text><text x="345" y="247" class="purple">ML · Statistics · Spatial</text>
+  </g>
+  <g class="nf-l8 hidden">
+    <text x="230" y="269" class="blue">Uptime    </text><text x="332" y="269" class="dim">: </text><text x="345" y="269" class="green">open to research internships</text>
+  </g>
+  <g class="nf-l9 hidden">
+    <text x="230" y="291" class="blue">Hobbies   </text><text x="332" y="291" class="dim">: </text>
+    <text x="345" y="291" class="red">running</text><text x="397" y="291" class="dim"> · </text>
+    <text x="416" y="291" class="yellow">painting</text>
+  </g>
+  <g class="nf-l10 hidden">
+    <text x="230" y="313" class="blue">Contact   </text><text x="332" y="313" class="dim">: </text><text x="345" y="313" class="cyan">anisabakiu1@icloud.com</text>
+  </g>
+
+  <!-- color swatches -->
+  <g class="nf-l11 hidden">
+    <rect x="230" y="323" width="16" height="16" rx="3" fill="#f7768e"/>
+    <rect x="250" y="323" width="16" height="16" rx="3" fill="#e0af68"/>
+    <rect x="270" y="323" width="16" height="16" rx="3" fill="#9ece6a"/>
+    <rect x="290" y="323" width="16" height="16" rx="3" fill="#7dcfff"/>
+    <rect x="310" y="323" width="16" height="16" rx="3" fill="#7aa2f7"/>
+    <rect x="330" y="323" width="16" height="16" rx="3" fill="#bb9af7"/>
+    <rect x="350" y="323" width="16" height="16" rx="3" fill="#c0caf5"/>
+    <rect x="370" y="323" width="16" height="16" rx="3" fill="#565f89"/>
+  </g>
+
+  <!-- final prompt + cursor -->
+  <g class="prompt2 hidden">
+    <text x="20" y="370" class="green">anisa@arch</text>
+    <text x="113" y="370" class="blue"> ~</text>
+    <text x="130" y="370" class="white"> $ </text>
+  </g>
+  <rect x="153" y="357" width="8" height="14" class="cur2 hidden"/>
+</svg>

@@ -1,37 +1,41 @@
-<h1 align="center">Hi 👋, I'm <a href="https://github.com/Ann155a" target="blank">
-Anisa</a></h1>
-<h3 align="center">A passionate Data Science Student</h3>
+<div align="center">
 
-<a target="_blank" align="center">
-  <img align="right" top="500" height="300" width="400" alt="GIF" src="https://media.tenor.com/PP9v7VIs6R4AAAAd/scaler-create-impact.gif">
-</a>
+# Hey, I'm Anisa 👩‍💻
 
-- 🔭 Focused on ML & Statistics
+*Turning raw data into real insight*
 
-- 🌱 Studying Data Science
-  
-- 😄 **I am open to**:
-	- collaboration opportunities 
-	- research internships
+<a href="https://www.linkedin.com/in/anisa-bakiu-8888a10b1/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+<a href="https://github.com/Ann155a"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/></a>
+<a href="https://stackoverflow.com/users/19318530/anisa"><img src="https://img.shields.io/badge/Stack_Overflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white"/></a>
+<a href="mailto:anisabakiu1@icloud.com"><img src="https://img.shields.io/badge/Email-000000?style=for-the-badge&logo=apple&logoColor=white"/></a>
 
-- 📫 _How to reach me_: **anisabakiu1@icloud.com**
-  
-<h3 align="center" > <img src="https://media.giphy.com/media/iY8CRBdQXODJSCERIr/giphy.gif" width="30" height="30" style="margin-right: 10px;">Connect with me </h3>
+</div>
 
-<p align="center">
-
- <div align="center"  class="icons-social" style="margin-left: 10px;">
-        <a style="margin-left: 10px;"  target="_blank" href="https://www.linkedin.com/in/anisa-bakiu-8888a10b1/">
-			<img src="https://img.icons8.com/doodle/40/000000/linkedin--v2.png"></a>
-        <a style="margin-left: 10px;" target="_blank" href="https://github.com/Ann155a">
-		<img src="https://img.icons8.com/doodle/40/000000/github--v1.png"></a>
-		<a style="margin-left: 10px;" target="_blank" href="https://stackoverflow.com/users/19318530/anisa">
-				<img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/40/000000/external-stack-overflow-is-a-question-and-answer-site-for-professional-logo-color-tal-revivo.png"></a>
-      </div>
-
-</p>
 ---
 
-Credit: [Anisa Bakiu](https://github.com/Ann155a)
+```python
+anisa = {
+    "focus"     : ["Machine Learning", "Statistics", "Data Science"],
+    "looking_for": ["Collaborations", "Research Internships"],
+    "currently" : "Making models that actually make sense 📊",
+    "contact"   : "anisabakiu1@icloud.com"
+}
+```
 
-Last Edited on: 29/08/2023
+---
+
+### 🧠 What I'm working with
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![R](https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)
+
+---
+
+### 📬 Open to opportunities — let's build something meaningful.
+
+<div align="center">
+  <img src="https://media.tenor.com/PP9v7VIs6R4AAAAd/scaler-create-impact.gif" width="380"/>
+</div>

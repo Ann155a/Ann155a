@@ -1,65 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" width="720" height="420">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400">
 <defs>
 <style>
-text { font-family: 'Courier New', monospace; font-size: 13px; }
-.bg   { fill: #1a1b26; }
-.bar  { fill: #16161e; }
-.blue   { fill: #7aa2f7; }
-.green  { fill: #9ece6a; }
-.purple { fill: #bb9af7; }
-.yellow { fill: #e0af68; }
-.red    { fill: #f7768e; }
-.cyan   { fill: #7dcfff; }
-.dim    { fill: #565f89; }
-.white  { fill: #c0caf5; }
-.hidden { opacity: 0; }
-
-.t-prompt { animation: show 0s 0.4s both; }
-.t-cmd    { animation: type-cmd 0.6s steps(8,end) 0.9s both; }
-
-.nf-l0  { animation: show 0s 1.7s  both; }
-.nf-l1  { animation: show 0s 1.78s both; }
-.nf-l2  { animation: show 0s 1.86s both; }
-.nf-l3  { animation: show 0s 1.94s both; }
-.nf-l4  { animation: show 0s 2.02s both; }
-.nf-l5  { animation: show 0s 2.10s both; }
-.nf-l6  { animation: show 0s 2.18s both; }
-.nf-l7  { animation: show 0s 2.26s both; }
-.nf-l8  { animation: show 0s 2.34s both; }
-.nf-l9  { animation: show 0s 2.42s both; }
-.nf-l10 { animation: show 0s 2.50s both; }
-.nf-l11 { animation: show 0s 2.58s both; }
-
-.prompt2 { animation: show 0s 2.9s both; }
-.cur2    { animation: show 0s 2.9s both, blink 1s step-end 2.9s infinite; }
-
-@keyframes show { to { opacity: 1; } }
-@keyframes blink { 50% { opacity: 0; } }
-@keyframes type-cmd {
-  from { clip-path: inset(0 100% 0 0); }
-  to   { clip-path: inset(0 0%  0 0); }
-}
-
-.e1  { stroke-dasharray: 78;  stroke-dashoffset: 78;  animation: draw .35s ease 1.70s forwards; }
-.e2  { stroke-dasharray: 78;  stroke-dashoffset: 78;  animation: draw .35s ease 1.85s forwards; }
-.e3  { stroke-dasharray: 76;  stroke-dashoffset: 76;  animation: draw .30s ease 2.00s forwards; }
-.e4  { stroke-dasharray: 66;  stroke-dashoffset: 66;  animation: draw .28s ease 2.10s forwards; }
-.e5  { stroke-dasharray: 107; stroke-dashoffset: 107; animation: draw .40s ease 2.18s forwards; }
-.e6  { stroke-dasharray: 66;  stroke-dashoffset: 66;  animation: draw .28s ease 2.28s forwards; }
-.e7  { stroke-dasharray: 76;  stroke-dashoffset: 76;  animation: draw .30s ease 2.36s forwards; }
-.e8  { stroke-dasharray: 70;  stroke-dashoffset: 70;  animation: draw .30s ease 2.44s forwards; }
-.e9  { stroke-dasharray: 70;  stroke-dashoffset: 70;  animation: draw .30s ease 2.52s forwards; }
-.e10 { stroke-dasharray: 153; stroke-dashoffset: 153; animation: draw .45s ease 2.60s forwards; }
-
-@keyframes draw { to { stroke-dashoffset: 0; } }
-
-.nodes { animation: show 0s 1.70s both; }
-.npulse { animation: show 0s 2.9s both, pulse 2.8s ease-in-out 3.2s infinite; }
-@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.45} }
+text{font-family:'Courier New',monospace;font-size:13px;}
+.bg{fill:#1a1b26;}.bar{fill:#16161e;}
+.blue{fill:#7aa2f7;}.green{fill:#9ece6a;}.purple{fill:#bb9af7;}
+.yellow{fill:#e0af68;}.red{fill:#f7768e;}.cyan{fill:#7dcfff;}
+.dim{fill:#565f89;}.white{fill:#c0caf5;}.hidden{opacity:0;}
+.t-prompt{animation:show 0s .4s both;}
+.t-cmd{animation:type-cmd .6s steps(8,end) .9s both;}
+.nf-l0{animation:show 0s 1.7s both;}.nf-l1{animation:show 0s 1.78s both;}
+.nf-l2{animation:show 0s 1.86s both;}.nf-l3{animation:show 0s 1.94s both;}
+.nf-l4{animation:show 0s 2.02s both;}.nf-l5{animation:show 0s 2.10s both;}
+.nf-l6{animation:show 0s 2.18s both;}.nf-l7{animation:show 0s 2.26s both;}
+.nf-l8{animation:show 0s 2.34s both;}.nf-l9{animation:show 0s 2.42s both;}
+.nf-l10{animation:show 0s 2.50s both;}.nf-l11{animation:show 0s 2.58s both;}
+.prompt2{animation:show 0s 2.9s both;}
+.cur2{animation:show 0s 2.9s both,blink 1s step-end 2.9s infinite;}
+@keyframes show{to{opacity:1;}}
+@keyframes blink{50%{opacity:0;}}
+@keyframes type-cmd{from{clip-path:inset(0 100% 0 0);}to{clip-path:inset(0 0% 0 0);}}
+.e1{stroke-dasharray:97;stroke-dashoffset:97;animation:draw .35s ease 1.70s forwards;}
+.e2{stroke-dasharray:97;stroke-dashoffset:97;animation:draw .35s ease 1.85s forwards;}
+.e3{stroke-dasharray:120;stroke-dashoffset:120;animation:draw .35s ease 2.00s forwards;}
+.e4{stroke-dasharray:90;stroke-dashoffset:90;animation:draw .30s ease 2.10s forwards;}
+.e5{stroke-dasharray:148;stroke-dashoffset:148;animation:draw .40s ease 2.18s forwards;}
+.e6{stroke-dasharray:90;stroke-dashoffset:90;animation:draw .30s ease 2.28s forwards;}
+.e7{stroke-dasharray:120;stroke-dashoffset:120;animation:draw .35s ease 2.36s forwards;}
+.e8{stroke-dasharray:100;stroke-dashoffset:100;animation:draw .32s ease 2.44s forwards;}
+.e9{stroke-dasharray:100;stroke-dashoffset:100;animation:draw .32s ease 2.52s forwards;}
+.e10{stroke-dasharray:200;stroke-dashoffset:200;animation:draw .45s ease 2.60s forwards;}
+@keyframes draw{to{stroke-dashoffset:0;}}
+.npulse{animation:show 0s 2.9s both,pulse 2.8s ease-in-out 3.2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
 </style>
 </defs>
 
-<rect width="720" height="420" rx="12" class="bg"/>
+<rect width="720" height="400" rx="12" class="bg"/>
 <rect x="0" y="0" width="720" height="12" rx="12" class="bar"/>
 <rect x="0" y="0" width="720" height="36" class="bar"/>
 <circle cx="18" cy="18" r="6" fill="#f7768e"/>
@@ -69,104 +45,97 @@ text { font-family: 'Courier New', monospace; font-size: 13px; }
 <rect x="0" y="35" width="720" height="1" fill="#292e42"/>
 
 <g class="t-prompt hidden">
-  <text x="20" y="66" class="green">anisa@arch</text>
-  <text x="113" y="66" class="blue"> ~</text>
-  <text x="130" y="66" class="white"> $ </text>
-  <text x="153" y="66" class="white t-cmd">neofetch</text>
+  <text x="20" y="64" class="green">anisa@arch</text>
+  <text x="113" y="64" class="blue"> ~</text>
+  <text x="130" y="64" class="white"> $ </text>
+  <text x="153" y="64" class="white t-cmd">neofetch</text>
 </g>
 
-<!-- GRAPH — nodes at: N1(105,160) N2(55,235) N3(165,235) N4(55,310) N5(165,310) N6(105,375) -->
-<!-- All edges: line goes from node center to node center, clipped by node radius=7 -->
+<!-- GRAPH nodes:
+  N1 = (100, 90)   top
+  N2 = (45,  165)  mid-left
+  N3 = (155, 165)  mid-right
+  N4 = (45,  240)  lower-left
+  N5 = (155, 240)  lower-right
+  N6 = (100, 315)  bottom
+-->
 
-<!-- edges drawn first so nodes sit on top -->
-<g fill="none" stroke="#7aa2f7" stroke-width="1.4" opacity="0.65">
-  <!-- N1->N2 --> <line class="e1"  x1="101.6" y1="166.1" x2="58.4"  y2="227.9"/>
-  <!-- N1->N3 --> <line class="e2"  x1="108.4" y1="166.1" x2="161.6" y2="227.9"/>
-  <!-- N2->N3 --> <line class="e3"  x1="62.0"  y1="235.0" x2="158.0" y2="235.0"/>
-  <!-- N2->N4 --> <line class="e4"  x1="55.0"  y1="242.0" x2="55.0"  y2="303.0"/>
-  <!-- N3->N4 --> <line class="e5"  x1="159.8" y1="239.7" x2="60.2"  y2="305.3"/>
-  <!-- N3->N5 --> <line class="e6"  x1="165.0" y1="242.0" x2="165.0" y2="303.0"/>
-  <!-- N4->N5 --> <line class="e7"  x1="62.0"  y1="310.0" x2="158.0" y2="310.0"/>
-  <!-- N4->N6 --> <line class="e8"  x1="58.8"  y1="316.3" x2="101.2" y2="368.7"/>
-  <!-- N5->N6 --> <line class="e9"  x1="161.2" y1="316.3" x2="108.8" y2="368.7"/>
-  <!-- N1->N5 --> <line class="e10" x1="106.9" y1="167.0" x2="163.1" y2="303.0"/>
+<!-- edges (drawn from node center, visually stop at circle edge) -->
+<g fill="none" stroke="#7aa2f7" stroke-width="1.5" opacity="0.65">
+  <line class="e1"  x1="100" y1="90"  x2="45"  y2="165"/>
+  <line class="e2"  x1="100" y1="90"  x2="155" y2="165"/>
+  <line class="e3"  x1="45"  y1="165" x2="155" y2="165"/>
+  <line class="e4"  x1="45"  y1="165" x2="45"  y2="240"/>
+  <line class="e5"  x1="155" y1="165" x2="45"  y2="240"/>
+  <line class="e6"  x1="155" y1="165" x2="155" y2="240"/>
+  <line class="e7"  x1="45"  y1="240" x2="155" y2="240"/>
+  <line class="e8"  x1="45"  y1="240" x2="100" y2="315"/>
+  <line class="e9"  x1="155" y1="240" x2="100" y2="315"/>
+  <line class="e10" x1="100" y1="90"  x2="155" y2="240"/>
 </g>
 
-<!-- nodes on top of edges -->
+<!-- nodes on top -->
 <g class="npulse hidden">
-  <!-- N1 top -->
-  <circle cx="105" cy="160" r="7" fill="#7aa2f7"/>
-  <!-- N2 mid-left -->
-  <circle cx="55"  cy="235" r="6" fill="#bb9af7"/>
-  <!-- N3 mid-right -->
-  <circle cx="165" cy="235" r="6" fill="#bb9af7"/>
-  <!-- N4 lower-left -->
-  <circle cx="55"  cy="310" r="6" fill="#9ece6a"/>
-  <!-- N5 lower-right -->
-  <circle cx="165" cy="310" r="6" fill="#9ece6a"/>
-  <!-- N6 bottom -->
-  <circle cx="105" cy="375" r="7" fill="#f7768e"/>
+  <circle cx="100" cy="90"  r="8" fill="#7aa2f7"/>
+  <circle cx="45"  cy="165" r="7" fill="#bb9af7"/>
+  <circle cx="155" cy="165" r="7" fill="#bb9af7"/>
+  <circle cx="45"  cy="240" r="7" fill="#9ece6a"/>
+  <circle cx="155" cy="240" r="7" fill="#9ece6a"/>
+  <circle cx="100" cy="315" r="8" fill="#f7768e"/>
 </g>
 
-<!-- INFO LINES -->
+<!-- INFO LINES (x=210 to leave graph space) -->
 <g class="nf-l0 hidden">
-  <text x="215" y="100" class="red">anisa</text>
-  <text x="260" y="100" class="dim">@</text>
-  <text x="271" y="100" class="red">arch</text>
+  <text x="210" y="90" class="red">anisa</text><text x="255" y="90" class="dim">@</text><text x="266" y="90" class="red">arch</text>
 </g>
-<g class="nf-l1 hidden"><text x="215" y="120" class="dim">──────────────────────</text></g>
+<g class="nf-l1 hidden"><text x="210" y="110" class="dim">──────────────────────</text></g>
 <g class="nf-l2 hidden">
-  <text x="215" y="141" class="blue">OS        </text><text x="318" y="141" class="dim">: </text><text x="331" y="141" class="white">Data Science Student</text>
+  <text x="210" y="131" class="blue">OS        </text><text x="313" y="131" class="dim">: </text><text x="326" y="131" class="white">Data Science Student</text>
 </g>
 <g class="nf-l3 hidden">
-  <text x="215" y="162" class="blue">Location  </text><text x="318" y="162" class="dim">: </text><text x="331" y="162" class="white">Bari, Italy</text>
+  <text x="210" y="152" class="blue">Location  </text><text x="313" y="152" class="dim">: </text><text x="326" y="152" class="white">Bari, Italy</text>
 </g>
 <g class="nf-l4 hidden">
-  <text x="215" y="183" class="blue">Shell     </text><text x="318" y="183" class="dim">: </text>
-  <text x="331" y="183" class="green">Python</text>
-  <text x="381" y="183" class="dim"> · </text>
-  <text x="399" y="183" class="cyan">R</text>
-  <text x="410" y="183" class="dim"> · </text>
-  <text x="428" y="183" class="yellow">Scala</text>
+  <text x="210" y="173" class="blue">Shell     </text><text x="313" y="173" class="dim">: </text>
+  <text x="326" y="173" class="green">Python</text><text x="375" y="173" class="dim"> · </text>
+  <text x="393" y="173" class="cyan">R</text><text x="404" y="173" class="dim"> · </text>
+  <text x="422" y="173" class="yellow">Scala</text>
 </g>
 <g class="nf-l5 hidden">
-  <text x="215" y="204" class="blue">Packages  </text><text x="318" y="204" class="dim">: </text><text x="331" y="204" class="white">sklearn · tidyverse · spark · QGIS</text>
+  <text x="210" y="194" class="blue">Packages  </text><text x="313" y="194" class="dim">: </text><text x="326" y="194" class="white">sklearn · tidyverse · spark · QGIS</text>
 </g>
 <g class="nf-l6 hidden">
-  <text x="215" y="225" class="blue">WM        </text><text x="318" y="225" class="dim">: </text><text x="331" y="225" class="purple">Tableau · Jupyter · RStudio</text>
+  <text x="210" y="215" class="blue">WM        </text><text x="313" y="215" class="dim">: </text><text x="326" y="215" class="purple">Tableau · Jupyter · RStudio</text>
 </g>
 <g class="nf-l7 hidden">
-  <text x="215" y="246" class="blue">Focus     </text><text x="318" y="246" class="dim">: </text><text x="331" y="246" class="purple">ML · Statistics · Graphs</text>
+  <text x="210" y="236" class="blue">Focus     </text><text x="313" y="236" class="dim">: </text><text x="326" y="236" class="purple">ML · Statistics · Graphs</text>
 </g>
 <g class="nf-l8 hidden">
-  <text x="215" y="267" class="blue">Uptime    </text><text x="318" y="267" class="dim">: </text><text x="331" y="267" class="green">open to work &amp; research</text>
+  <text x="210" y="257" class="blue">Uptime    </text><text x="313" y="257" class="dim">: </text><text x="326" y="257" class="green">open to work &amp; research</text>
 </g>
 <g class="nf-l9 hidden">
-  <text x="215" y="288" class="blue">Hobbies   </text><text x="318" y="288" class="dim">: </text>
-  <text x="331" y="288" class="red">running</text>
-  <text x="386" y="288" class="dim"> · </text>
-  <text x="404" y="288" class="yellow">painting</text>
+  <text x="210" y="278" class="blue">Hobbies   </text><text x="313" y="278" class="dim">: </text>
+  <text x="326" y="278" class="red">running</text><text x="381" y="278" class="dim"> · </text><text x="399" y="278" class="yellow">painting</text>
 </g>
 <g class="nf-l10 hidden">
-  <text x="215" y="309" class="blue">Contact   </text><text x="318" y="309" class="dim">: </text><text x="331" y="309" class="cyan">anisabakiu1@icloud.com</text>
+  <text x="210" y="299" class="blue">Contact   </text><text x="313" y="299" class="dim">: </text><text x="326" y="299" class="cyan">anisabakiu1@icloud.com</text>
 </g>
-
 <g class="nf-l11 hidden">
-  <rect x="215" y="325" width="16" height="16" rx="3" fill="#f7768e"/>
-  <rect x="235" y="325" width="16" height="16" rx="3" fill="#e0af68"/>
-  <rect x="255" y="325" width="16" height="16" rx="3" fill="#9ece6a"/>
-  <rect x="275" y="325" width="16" height="16" rx="3" fill="#7dcfff"/>
-  <rect x="295" y="325" width="16" height="16" rx="3" fill="#7aa2f7"/>
-  <rect x="315" y="325" width="16" height="16" rx="3" fill="#bb9af7"/>
-  <rect x="335" y="325" width="16" height="16" rx="3" fill="#c0caf5"/>
-  <rect x="355" y="325" width="16" height="16" rx="3" fill="#565f89"/>
+  <rect x="210" y="315" width="16" height="16" rx="3" fill="#f7768e"/>
+  <rect x="230" y="315" width="16" height="16" rx="3" fill="#e0af68"/>
+  <rect x="250" y="315" width="16" height="16" rx="3" fill="#9ece6a"/>
+  <rect x="270" y="315" width="16" height="16" rx="3" fill="#7dcfff"/>
+  <rect x="290" y="315" width="16" height="16" rx="3" fill="#7aa2f7"/>
+  <rect x="310" y="315" width="16" height="16" rx="3" fill="#bb9af7"/>
+  <rect x="330" y="315" width="16" height="16" rx="3" fill="#c0caf5"/>
+  <rect x="350" y="315" width="16" height="16" rx="3" fill="#565f89"/>
 </g>
 
 <g class="prompt2 hidden">
-  <text x="20" y="400" class="green">anisa@arch</text>
-  <text x="113" y="400" class="blue"> ~</text>
-  <text x="130" y="400" class="white"> $ </text>
+  <text x="20" y="378" class="green">anisa@arch</text>
+  <text x="113" y="378" class="blue"> ~</text>
+  <text x="130" y="378" class="white"> $ </text>
 </g>
-<rect x="153" y="387" width="8" height="14" class="cur2 hidden"/>
+<rect x="153" y="365" width="8" height="14" class="cur2 hidden"/>
 
 </svg>

@@ -8,33 +8,39 @@ text{font-family:'Courier New',monospace;font-size:13px;}
 .dim{fill:#565f89;}.white{fill:#c0caf5;}.hidden{opacity:0;}
 .t-prompt{animation:show 0s .4s both;}
 .t-cmd{animation:type-cmd .6s steps(8,end) .9s both;}
-.nf-l0{animation:show 0s 1.7s both;}.nf-l1{animation:show 0s 1.78s both;}
-.nf-l2{animation:show 0s 1.86s both;}.nf-l3{animation:show 0s 1.94s both;}
-.nf-l4{animation:show 0s 2.02s both;}.nf-l5{animation:show 0s 2.10s both;}
-.nf-l6{animation:show 0s 2.18s both;}.nf-l7{animation:show 0s 2.26s both;}
-.nf-l8{animation:show 0s 2.34s both;}.nf-l9{animation:show 0s 2.42s both;}
-.nf-l10{animation:show 0s 2.50s both;}.nf-l11{animation:show 0s 2.58s both;}
-.prompt2{animation:show 0s 2.9s both;}
-.cur2{animation:show 0s 2.9s both,blink 1s step-end 2.9s infinite;}
+.nf-l0{animation:show 0s 1.9s both;}.nf-l1{animation:show 0s 1.98s both;}
+.nf-l2{animation:show 0s 2.06s both;}.nf-l3{animation:show 0s 2.14s both;}
+.nf-l4{animation:show 0s 2.22s both;}.nf-l5{animation:show 0s 2.30s both;}
+.nf-l6{animation:show 0s 2.38s both;}.nf-l7{animation:show 0s 2.46s both;}
+.nf-l8{animation:show 0s 2.54s both;}.nf-l9{animation:show 0s 2.62s both;}
+.nf-l10{animation:show 0s 2.70s both;}.nf-l11{animation:show 0s 2.78s both;}
+.prompt2{animation:show 0s 3.1s both;}
+.cur2{animation:show 0s 3.1s both,blink 1s step-end 3.1s infinite;}
 @keyframes show{to{opacity:1;}}
 @keyframes blink{50%{opacity:0;}}
 @keyframes type-cmd{from{clip-path:inset(0 100% 0 0);}to{clip-path:inset(0 0% 0 0);}}
-.e1{stroke-dasharray:97;stroke-dashoffset:97;animation:draw .35s ease 1.70s forwards;}
-.e2{stroke-dasharray:97;stroke-dashoffset:97;animation:draw .35s ease 1.85s forwards;}
-.e3{stroke-dasharray:120;stroke-dashoffset:120;animation:draw .35s ease 2.00s forwards;}
-.e4{stroke-dasharray:90;stroke-dashoffset:90;animation:draw .30s ease 2.10s forwards;}
-.e5{stroke-dasharray:148;stroke-dashoffset:148;animation:draw .40s ease 2.18s forwards;}
-.e6{stroke-dasharray:90;stroke-dashoffset:90;animation:draw .30s ease 2.28s forwards;}
-.e7{stroke-dasharray:120;stroke-dashoffset:120;animation:draw .35s ease 2.36s forwards;}
-.e8{stroke-dasharray:100;stroke-dashoffset:100;animation:draw .32s ease 2.44s forwards;}
-.e9{stroke-dasharray:100;stroke-dashoffset:100;animation:draw .32s ease 2.52s forwards;}
-.e10{stroke-dasharray:200;stroke-dashoffset:200;animation:draw .45s ease 2.60s forwards;}
-@keyframes draw{to{stroke-dashoffset:0;}}
-.npulse{animation:show 0s 2.9s both,pulse 2.8s ease-in-out 3.2s infinite;}
-@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
+.el1{animation:show 0s 1.55s both;}
+.el2{animation:show 0s 1.65s both;}
+.el3{animation:show 0s 1.75s both;}
+.nl1{animation:show 0s 1.50s both;}
+.nl2{animation:show 0s 1.60s both;}
+.nl3{animation:show 0s 1.70s both;}
+.nl4{animation:show 0s 1.80s both;}
+.npulse{animation:show 0s 3.1s both, pulse 2.8s ease-in-out 3.4s infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.35;}}
+.sig{stroke-dasharray:6 200;stroke-dashoffset:0;animation:travel 1.8s linear infinite;}
+@keyframes travel{to{stroke-dashoffset:-206;}}
+.sig.d2{animation-delay:.6s;}
+.sig.d3{animation-delay:1.2s;}
+.sig.d4{animation-delay:.3s;}
+.sig.d5{animation-delay:.9s;}
+.sig.d6{animation-delay:1.5s;}
+.sig.d7{animation-delay:.45s;}
+.sig.d8{animation-delay:1.05s;}
 </style>
 </defs>
 
+<!-- Terminal chrome -->
 <rect width="720" height="400" rx="12" class="bg"/>
 <rect x="0" y="0" width="720" height="12" rx="12" class="bar"/>
 <rect x="0" y="0" width="720" height="36" class="bar"/>
@@ -44,6 +50,7 @@ text{font-family:'Courier New',monospace;font-size:13px;}
 <text x="80" y="23" class="dim" font-size="12">anisa@arch: ~</text>
 <rect x="0" y="35" width="720" height="1" fill="#292e42"/>
 
+<!-- Prompt -->
 <g class="t-prompt hidden">
   <text x="20" y="64" class="green">anisa@arch</text>
   <text x="113" y="64" class="blue"> ~</text>
@@ -51,40 +58,108 @@ text{font-family:'Courier New',monospace;font-size:13px;}
   <text x="153" y="64" class="white t-cmd">neofetch</text>
 </g>
 
-<!-- GRAPH nodes:
-  N1 = (100, 90)   top
-  N2 = (45,  165)  mid-left
-  N3 = (155, 165)  mid-right
-  N4 = (45,  240)  lower-left
-  N5 = (155, 240)  lower-right
-  N6 = (100, 315)  bottom
--->
-
-<!-- edges (drawn from node center, visually stop at circle edge) -->
-<g fill="none" stroke="#7aa2f7" stroke-width="1.5" opacity="0.65">
-  <line class="e1"  x1="100" y1="90"  x2="45"  y2="165"/>
-  <line class="e2"  x1="100" y1="90"  x2="155" y2="165"/>
-  <line class="e3"  x1="45"  y1="165" x2="155" y2="165"/>
-  <line class="e4"  x1="45"  y1="165" x2="45"  y2="240"/>
-  <line class="e5"  x1="155" y1="165" x2="45"  y2="240"/>
-  <line class="e6"  x1="155" y1="165" x2="155" y2="240"/>
-  <line class="e7"  x1="45"  y1="240" x2="155" y2="240"/>
-  <line class="e8"  x1="45"  y1="240" x2="100" y2="315"/>
-  <line class="e9"  x1="155" y1="240" x2="100" y2="315"/>
-  <line class="e10" x1="100" y1="90"  x2="155" y2="240"/>
+<!-- L1→L2 edges (24) -->
+<g class="el1 hidden" fill="none" stroke="#565f89" stroke-width="0.7" opacity="0.5">
+  <line x1="35" y1="95"  x2="90" y2="110"/><line x1="35" y1="95"  x2="90" y2="165"/>
+  <line x1="35" y1="95"  x2="90" y2="220"/><line x1="35" y1="95"  x2="90" y2="275"/>
+  <line x1="35" y1="140" x2="90" y2="110"/><line x1="35" y1="140" x2="90" y2="165"/>
+  <line x1="35" y1="140" x2="90" y2="220"/><line x1="35" y1="140" x2="90" y2="275"/>
+  <line x1="35" y1="185" x2="90" y2="110"/><line x1="35" y1="185" x2="90" y2="165"/>
+  <line x1="35" y1="185" x2="90" y2="220"/><line x1="35" y1="185" x2="90" y2="275"/>
+  <line x1="35" y1="230" x2="90" y2="110"/><line x1="35" y1="230" x2="90" y2="165"/>
+  <line x1="35" y1="230" x2="90" y2="220"/><line x1="35" y1="230" x2="90" y2="275"/>
+  <line x1="35" y1="275" x2="90" y2="110"/><line x1="35" y1="275" x2="90" y2="165"/>
+  <line x1="35" y1="275" x2="90" y2="220"/><line x1="35" y1="275" x2="90" y2="275"/>
+  <line x1="35" y1="320" x2="90" y2="110"/><line x1="35" y1="320" x2="90" y2="165"/>
+  <line x1="35" y1="320" x2="90" y2="220"/><line x1="35" y1="320" x2="90" y2="275"/>
 </g>
 
-<!-- nodes on top -->
+<!-- L2→L3 edges (12) -->
+<g class="el2 hidden" fill="none" stroke="#565f89" stroke-width="0.8" opacity="0.55">
+  <line x1="90" y1="110" x2="145" y2="130"/><line x1="90" y1="110" x2="145" y2="200"/>
+  <line x1="90" y1="110" x2="145" y2="265"/>
+  <line x1="90" y1="165" x2="145" y2="130"/><line x1="90" y1="165" x2="145" y2="200"/>
+  <line x1="90" y1="165" x2="145" y2="265"/>
+  <line x1="90" y1="220" x2="145" y2="130"/><line x1="90" y1="220" x2="145" y2="200"/>
+  <line x1="90" y1="220" x2="145" y2="265"/>
+  <line x1="90" y1="275" x2="145" y2="130"/><line x1="90" y1="275" x2="145" y2="200"/>
+  <line x1="90" y1="275" x2="145" y2="265"/>
+</g>
+
+<!-- L3→L4 edges (6) -->
+<g class="el3 hidden" fill="none" stroke="#565f89" stroke-width="0.9" opacity="0.6">
+  <line x1="145" y1="130" x2="185" y2="155"/><line x1="145" y1="130" x2="185" y2="245"/>
+  <line x1="145" y1="200" x2="185" y2="155"/><line x1="145" y1="200" x2="185" y2="245"/>
+  <line x1="145" y1="265" x2="185" y2="155"/><line x1="145" y1="265" x2="185" y2="245"/>
+</g>
+
+<!-- Travelling signal dots -->
+<g class="el1 hidden" fill="none">
+  <line class="sig"    stroke="#7aa2f7" stroke-width="1.5" x1="35" y1="185" x2="90" y2="165"/>
+  <line class="sig d2" stroke="#bb9af7" stroke-width="1.5" x1="35" y1="230" x2="90" y2="220"/>
+  <line class="sig d3" stroke="#7aa2f7" stroke-width="1.5" x1="35" y1="140" x2="90" y2="275"/>
+</g>
+<g class="el2 hidden" fill="none">
+  <line class="sig d4" stroke="#7aa2f7" stroke-width="1.5" x1="90" y1="165" x2="145" y2="200"/>
+  <line class="sig d5" stroke="#bb9af7" stroke-width="1.5" x1="90" y1="220" x2="145" y2="130"/>
+  <line class="sig d6" stroke="#7aa2f7" stroke-width="1.5" x1="90" y1="275" x2="145" y2="265"/>
+</g>
+<g class="el3 hidden" fill="none">
+  <line class="sig d7" stroke="#9ece6a" stroke-width="1.5" x1="145" y1="200" x2="185" y2="155"/>
+  <line class="sig d8" stroke="#9ece6a" stroke-width="1.5" x1="145" y1="265" x2="185" y2="245"/>
+</g>
+
+<!-- L1 nodes (input — blue) -->
+<g class="nl1 hidden">
+  <circle cx="35" cy="95"  r="5.5" fill="#7aa2f7" stroke="#1a1b26" stroke-width="1.5"/>
+  <circle cx="35" cy="140" r="5.5" fill="#7aa2f7" stroke="#1a1b26" stroke-width="1.5"/>
+  <circle cx="35" cy="185" r="5.5" fill="#7aa2f7" stroke="#1a1b26" stroke-width="1.5"/>
+  <circle cx="35" cy="230" r="5.5" fill="#7aa2f7" stroke="#1a1b26" stroke-width="1.5"/>
+  <circle cx="35" cy="275" r="5.5" fill="#7aa2f7" stroke="#1a1b26" stroke-width="1.5"/>
+  <circle cx="35" cy="320" r="5.5" fill="#7aa2f7" stroke="#1a1b26" stroke-width="1.5"/>
+</g>
+
+<!-- L2 nodes (hidden 1 — purple) -->
+<g class="nl2 hidden">
+  <circle cx="90" cy="110" r="5.5" fill="#bb9af7" stroke="#1a1b26" stroke-width="1.5"/>
+  <circle cx="90" cy="165" r="5.5" fill="#bb9af7" stroke="#1a1b26" stroke-width="1.5"/>
+  <circle cx="90" cy="220" r="5.5" fill="#bb9af7" stroke="#1a1b26" stroke-width="1.5"/>
+  <circle cx="90" cy="275" r="5.5" fill="#bb9af7" stroke="#1a1b26" stroke-width="1.5"/>
+</g>
+
+<!-- L3 nodes (hidden 2 — purple) -->
+<g class="nl3 hidden">
+  <circle cx="145" cy="130" r="5.5" fill="#bb9af7" stroke="#1a1b26" stroke-width="1.5"/>
+  <circle cx="145" cy="200" r="5.5" fill="#bb9af7" stroke="#1a1b26" stroke-width="1.5"/>
+  <circle cx="145" cy="265" r="5.5" fill="#bb9af7" stroke="#1a1b26" stroke-width="1.5"/>
+</g>
+
+<!-- L4 nodes (output — green) -->
+<g class="nl4 hidden">
+  <circle cx="185" cy="155" r="6" fill="#9ece6a" stroke="#1a1b26" stroke-width="1.5"/>
+  <circle cx="185" cy="245" r="6" fill="#9ece6a" stroke="#1a1b26" stroke-width="1.5"/>
+</g>
+
+<!-- Pulsing overlay -->
 <g class="npulse hidden">
-  <circle cx="100" cy="90"  r="8" fill="#7aa2f7"/>
-  <circle cx="45"  cy="165" r="7" fill="#bb9af7"/>
-  <circle cx="155" cy="165" r="7" fill="#bb9af7"/>
-  <circle cx="45"  cy="240" r="7" fill="#9ece6a"/>
-  <circle cx="155" cy="240" r="7" fill="#9ece6a"/>
-  <circle cx="100" cy="315" r="8" fill="#f7768e"/>
+  <circle cx="35" cy="95"  r="5.5" fill="#7aa2f7"/>
+  <circle cx="35" cy="140" r="5.5" fill="#7aa2f7"/>
+  <circle cx="35" cy="185" r="5.5" fill="#7aa2f7"/>
+  <circle cx="35" cy="230" r="5.5" fill="#7aa2f7"/>
+  <circle cx="35" cy="275" r="5.5" fill="#7aa2f7"/>
+  <circle cx="35" cy="320" r="5.5" fill="#7aa2f7"/>
+  <circle cx="90" cy="110" r="5.5" fill="#bb9af7"/>
+  <circle cx="90" cy="165" r="5.5" fill="#bb9af7"/>
+  <circle cx="90" cy="220" r="5.5" fill="#bb9af7"/>
+  <circle cx="90" cy="275" r="5.5" fill="#bb9af7"/>
+  <circle cx="145" cy="130" r="5.5" fill="#bb9af7"/>
+  <circle cx="145" cy="200" r="5.5" fill="#bb9af7"/>
+  <circle cx="145" cy="265" r="5.5" fill="#bb9af7"/>
+  <circle cx="185" cy="155" r="6"   fill="#9ece6a"/>
+  <circle cx="185" cy="245" r="6"   fill="#9ece6a"/>
 </g>
 
-<!-- INFO LINES (x=210 to leave graph space) -->
+<!-- INFO LINES -->
 <g class="nf-l0 hidden">
   <text x="210" y="90" class="red">anisa</text><text x="255" y="90" class="dim">@</text><text x="266" y="90" class="red">arch</text>
 </g>
@@ -137,5 +212,4 @@ text{font-family:'Courier New',monospace;font-size:13px;}
   <text x="130" y="378" class="white"> $ </text>
 </g>
 <rect x="153" y="365" width="8" height="14" class="cur2 hidden"/>
-
 </svg>

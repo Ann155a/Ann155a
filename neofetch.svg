@@ -180,7 +180,7 @@ text{font-family:'Courier New',monospace;font-size:13px;}
   <text x="210" y="194" class="blue">Packages  </text><text x="313" y="194" class="dim">: </text><text x="326" y="194" class="white">sklearn · tidyverse · spark · QGIS</text>
 </g>
 <g class="nf-l6 hidden">
-  <text x="210" y="215" class="blue">WM        </text><text x="313" y="215" class="dim">: </text><text x="326" y="215" class="purple">Tableau · Jupyter · RStudio</text>
+  <text x="210" y="215" class="blue">WM        </text><text x="313" y="215" class="dim">: </text><text x="326" y="215" class="purple">VS Code · Jupyter · RStudio</text>
 </g>
 <g class="nf-l7 hidden">
   <text x="210" y="236" class="blue">Focus     </text><text x="313" y="236" class="dim">: </text><text x="326" y="236" class="purple">ML · Statistics · Graphs</text>

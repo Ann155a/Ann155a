@@ -1,9 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400">
 
+  <!-- ============================================================
+       STYLES
+  ============================================================ -->
   <defs>
     <style>
       text { font-family: 'Courier New', monospace; font-size: 13px; }
 
+      /* Base colors */
       .bg     { fill: #1a1b26; }
       .bar    { fill: #16161e; }
       .blue   { fill: #7aa2f7; }
@@ -16,11 +20,11 @@
       .white  { fill: #c0caf5; }
       .hidden { opacity: 0; }
 
-      /* ── Prompt & command typing ── */
-      .t-prompt { animation: show 0s .4s both; }
-      .t-cmd    { animation: type-cmd .6s steps(8, end) .9s both; }
+      /* ── Prompt + command typing ── */
+      .t-prompt { animation: show 0s 0.4s both; }
+      .t-cmd    { animation: type-cmd 0.6s steps(8, end) 0.9s both; }
 
-      /* ── Info lines stagger ── */
+      /* ── Neofetch lines appear one by one ── */
       .nf-l0  { animation: show 0s 1.90s both; }
       .nf-l1  { animation: show 0s 1.98s both; }
       .nf-l2  { animation: show 0s 2.06s both; }
@@ -34,49 +38,52 @@
       .nf-l10 { animation: show 0s 2.70s both; }
       .nf-l11 { animation: show 0s 2.78s both; }
 
-      /* ── Second prompt & cursor ── */
+      /* ── Second prompt + blinking cursor ── */
       .prompt2 { animation: show 0s 3.1s both; }
       .cur2    { animation: show 0s 3.1s both, blink 1s step-end 3.1s infinite; }
 
-      /* ── Neural network layer fade-in ── */
+      /* ── Neural net edges (3 waves) ── */
       .el1 { animation: show 0s 1.55s both; }
       .el2 { animation: show 0s 1.65s both; }
       .el3 { animation: show 0s 1.75s both; }
+
+      /* ── Neural net node layers ── */
       .nl1 { animation: show 0s 1.50s both; }
       .nl2 { animation: show 0s 1.60s both; }
       .nl3 { animation: show 0s 1.70s both; }
       .nl4 { animation: show 0s 1.80s both; }
 
-      /* ── Node pulse after load ── */
+      /* ── Idle pulse on all nodes ── */
       .npulse { animation: show 0s 3.1s both, pulse 2.8s ease-in-out 3.4s infinite; }
 
-      /* ── Signal travel ── */
+      /* ── Travelling signal dots ── */
       .sig    { stroke-dasharray: 6 200; stroke-dashoffset: 0; animation: travel 1.8s linear infinite; }
-      .sig.d2 { animation-delay: .60s; }
-      .sig.d3 { animation-delay: 1.2s; }
-      .sig.d4 { animation-delay: .30s; }
-      .sig.d5 { animation-delay: .90s; }
-      .sig.d6 { animation-delay: 1.5s; }
-      .sig.d7 { animation-delay: .45s; }
+      .sig.d2 { animation-delay: 0.6s;  }
+      .sig.d3 { animation-delay: 1.2s;  }
+      .sig.d4 { animation-delay: 0.3s;  }
+      .sig.d5 { animation-delay: 0.9s;  }
+      .sig.d6 { animation-delay: 1.5s;  }
+      .sig.d7 { animation-delay: 0.45s; }
       .sig.d8 { animation-delay: 1.05s; }
 
       /* ── Keyframes ── */
-      @keyframes show     { to { opacity: 1; } }
-      @keyframes blink    { 50% { opacity: 0; } }
-      @keyframes type-cmd { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0% 0 0); } }
-      @keyframes pulse    { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
-      @keyframes travel   { to { stroke-dashoffset: -206; } }
+      @keyframes show     { to   { opacity: 1; } }
+      @keyframes blink    { 50%  { opacity: 0; } }
+      @keyframes pulse    { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+      @keyframes travel   { to   { stroke-dashoffset: -206; } }
+      @keyframes type-cmd {
+        from { clip-path: inset(0 100% 0 0); }
+        to   { clip-path: inset(0   0% 0 0); }
+      }
     </style>
   </defs>
 
-
-  <!-- ══════════════════════════════════════════
+  <!-- ============================================================
        TERMINAL CHROME
-       ══════════════════════════════════════════ -->
-
+  ============================================================ -->
   <rect width="720" height="400" rx="12" class="bg"/>
   <rect x="0" y="0" width="720" height="12" rx="12" class="bar"/>
-  <rect x="0" y="0" width="720" height="36" class="bar"/>
+  <rect x="0" y="0" width="720" height="36"         class="bar"/>
 
   <!-- Traffic-light buttons -->
   <circle cx="18" cy="18" r="6" fill="#f7768e"/>
@@ -86,11 +93,9 @@
   <text x="80" y="23" class="dim" font-size="12">anisa@arch: ~</text>
   <rect x="0" y="35" width="720" height="1" fill="#292e42"/>
 
-
-  <!-- ══════════════════════════════════════════
-       PROMPT
-       ══════════════════════════════════════════ -->
-
+  <!-- ============================================================
+       PROMPT + COMMAND
+  ============================================================ -->
   <g class="t-prompt hidden">
     <text x="20"  y="64" class="green">anisa@arch</text>
     <text x="113" y="64" class="blue"> ~</text>
@@ -98,103 +103,66 @@
     <text x="153" y="64" class="white t-cmd">neofetch</text>
   </g>
 
-
-  <!-- ══════════════════════════════════════════
-       NEURAL NETWORK — edges
-       ══════════════════════════════════════════ -->
-
-  <!-- L1 → L2  (24 edges) -->
+  <!-- ============================================================
+       NEURAL NET — EDGES (layer 1 → 2)
+  ============================================================ -->
   <g class="el1 hidden" fill="none" stroke="#565f89" stroke-width="0.7" opacity="0.5">
-    <line x1="35" y1="95"  x2="90" y2="110"/>
-    <line x1="35" y1="95"  x2="90" y2="165"/>
-    <line x1="35" y1="95"  x2="90" y2="220"/>
-    <line x1="35" y1="95"  x2="90" y2="275"/>
-
-    <line x1="35" y1="140" x2="90" y2="110"/>
-    <line x1="35" y1="140" x2="90" y2="165"/>
-    <line x1="35" y1="140" x2="90" y2="220"/>
-    <line x1="35" y1="140" x2="90" y2="275"/>
-
-    <line x1="35" y1="185" x2="90" y2="110"/>
-    <line x1="35" y1="185" x2="90" y2="165"/>
-    <line x1="35" y1="185" x2="90" y2="220"/>
-    <line x1="35" y1="185" x2="90" y2="275"/>
-
-    <line x1="35" y1="230" x2="90" y2="110"/>
-    <line x1="35" y1="230" x2="90" y2="165"/>
-    <line x1="35" y1="230" x2="90" y2="220"/>
-    <line x1="35" y1="230" x2="90" y2="275"/>
-
-    <line x1="35" y1="275" x2="90" y2="110"/>
-    <line x1="35" y1="275" x2="90" y2="165"/>
-    <line x1="35" y1="275" x2="90" y2="220"/>
-    <line x1="35" y1="275" x2="90" y2="275"/>
-
-    <line x1="35" y1="320" x2="90" y2="110"/>
-    <line x1="35" y1="320" x2="90" y2="165"/>
-    <line x1="35" y1="320" x2="90" y2="220"/>
-    <line x1="35" y1="320" x2="90" y2="275"/>
+    <line x1="35" y1="95"  x2="90" y2="110"/> <line x1="35" y1="95"  x2="90" y2="165"/>
+    <line x1="35" y1="95"  x2="90" y2="220"/> <line x1="35" y1="95"  x2="90" y2="275"/>
+    <line x1="35" y1="140" x2="90" y2="110"/> <line x1="35" y1="140" x2="90" y2="165"/>
+    <line x1="35" y1="140" x2="90" y2="220"/> <line x1="35" y1="140" x2="90" y2="275"/>
+    <line x1="35" y1="185" x2="90" y2="110"/> <line x1="35" y1="185" x2="90" y2="165"/>
+    <line x1="35" y1="185" x2="90" y2="220"/> <line x1="35" y1="185" x2="90" y2="275"/>
+    <line x1="35" y1="230" x2="90" y2="110"/> <line x1="35" y1="230" x2="90" y2="165"/>
+    <line x1="35" y1="230" x2="90" y2="220"/> <line x1="35" y1="230" x2="90" y2="275"/>
+    <line x1="35" y1="275" x2="90" y2="110"/> <line x1="35" y1="275" x2="90" y2="165"/>
+    <line x1="35" y1="275" x2="90" y2="220"/> <line x1="35" y1="275" x2="90" y2="275"/>
+    <line x1="35" y1="320" x2="90" y2="110"/> <line x1="35" y1="320" x2="90" y2="165"/>
+    <line x1="35" y1="320" x2="90" y2="220"/> <line x1="35" y1="320" x2="90" y2="275"/>
   </g>
 
-  <!-- L2 → L3  (12 edges) -->
+  <!-- EDGES (layer 2 → 3) -->
   <g class="el2 hidden" fill="none" stroke="#565f89" stroke-width="0.8" opacity="0.55">
-    <line x1="90" y1="110" x2="145" y2="130"/>
-    <line x1="90" y1="110" x2="145" y2="200"/>
+    <line x1="90" y1="110" x2="145" y2="130"/> <line x1="90" y1="110" x2="145" y2="200"/>
     <line x1="90" y1="110" x2="145" y2="265"/>
-
-    <line x1="90" y1="165" x2="145" y2="130"/>
-    <line x1="90" y1="165" x2="145" y2="200"/>
+    <line x1="90" y1="165" x2="145" y2="130"/> <line x1="90" y1="165" x2="145" y2="200"/>
     <line x1="90" y1="165" x2="145" y2="265"/>
-
-    <line x1="90" y1="220" x2="145" y2="130"/>
-    <line x1="90" y1="220" x2="145" y2="200"/>
+    <line x1="90" y1="220" x2="145" y2="130"/> <line x1="90" y1="220" x2="145" y2="200"/>
     <line x1="90" y1="220" x2="145" y2="265"/>
-
-    <line x1="90" y1="275" x2="145" y2="130"/>
-    <line x1="90" y1="275" x2="145" y2="200"/>
+    <line x1="90" y1="275" x2="145" y2="130"/> <line x1="90" y1="275" x2="145" y2="200"/>
     <line x1="90" y1="275" x2="145" y2="265"/>
   </g>
 
-  <!-- L3 → L4  (6 edges) -->
+  <!-- EDGES (layer 3 → 4) -->
   <g class="el3 hidden" fill="none" stroke="#565f89" stroke-width="0.9" opacity="0.6">
-    <line x1="145" y1="130" x2="185" y2="155"/>
-    <line x1="145" y1="130" x2="185" y2="245"/>
-
-    <line x1="145" y1="200" x2="185" y2="155"/>
-    <line x1="145" y1="200" x2="185" y2="245"/>
-
-    <line x1="145" y1="265" x2="185" y2="155"/>
-    <line x1="145" y1="265" x2="185" y2="245"/>
+    <line x1="145" y1="130" x2="185" y2="155"/> <line x1="145" y1="130" x2="185" y2="245"/>
+    <line x1="145" y1="200" x2="185" y2="155"/> <line x1="145" y1="200" x2="185" y2="245"/>
+    <line x1="145" y1="265" x2="185" y2="155"/> <line x1="145" y1="265" x2="185" y2="245"/>
   </g>
 
-
-  <!-- ══════════════════════════════════════════
-       NEURAL NETWORK — travelling signals
-       ══════════════════════════════════════════ -->
-
+  <!-- ============================================================
+       NEURAL NET — TRAVELLING SIGNAL DOTS
+  ============================================================ -->
   <g class="el1 hidden" fill="none">
     <line class="sig"    stroke="#7aa2f7" stroke-width="1.5" x1="35" y1="185" x2="90" y2="165"/>
     <line class="sig d2" stroke="#bb9af7" stroke-width="1.5" x1="35" y1="230" x2="90" y2="220"/>
     <line class="sig d3" stroke="#7aa2f7" stroke-width="1.5" x1="35" y1="140" x2="90" y2="275"/>
   </g>
-
   <g class="el2 hidden" fill="none">
     <line class="sig d4" stroke="#7aa2f7" stroke-width="1.5" x1="90"  y1="165" x2="145" y2="200"/>
     <line class="sig d5" stroke="#bb9af7" stroke-width="1.5" x1="90"  y1="220" x2="145" y2="130"/>
     <line class="sig d6" stroke="#7aa2f7" stroke-width="1.5" x1="90"  y1="275" x2="145" y2="265"/>
   </g>
-
   <g class="el3 hidden" fill="none">
     <line class="sig d7" stroke="#9ece6a" stroke-width="1.5" x1="145" y1="200" x2="185" y2="155"/>
     <line class="sig d8" stroke="#9ece6a" stroke-width="1.5" x1="145" y1="265" x2="185" y2="245"/>
   </g>
 
+  <!-- ============================================================
+       NEURAL NET — NODES
+  ============================================================ -->
 
-  <!-- ══════════════════════════════════════════
-       NEURAL NETWORK — nodes
-       ══════════════════════════════════════════ -->
-
-  <!-- L1 — input (blue) -->
+  <!-- Layer 1 — input (blue) -->
   <g class="nl1 hidden">
     <circle cx="35" cy="95"  r="5.5" fill="#7aa2f7" stroke="#1a1b26" stroke-width="1.5"/>
     <circle cx="35" cy="140" r="5.5" fill="#7aa2f7" stroke="#1a1b26" stroke-width="1.5"/>
@@ -204,7 +172,7 @@
     <circle cx="35" cy="320" r="5.5" fill="#7aa2f7" stroke="#1a1b26" stroke-width="1.5"/>
   </g>
 
-  <!-- L2 — hidden 1 (purple) -->
+  <!-- Layer 2 — hidden (purple) -->
   <g class="nl2 hidden">
     <circle cx="90" cy="110" r="5.5" fill="#bb9af7" stroke="#1a1b26" stroke-width="1.5"/>
     <circle cx="90" cy="165" r="5.5" fill="#bb9af7" stroke="#1a1b26" stroke-width="1.5"/>
@@ -212,20 +180,20 @@
     <circle cx="90" cy="275" r="5.5" fill="#bb9af7" stroke="#1a1b26" stroke-width="1.5"/>
   </g>
 
-  <!-- L3 — hidden 2 (purple) -->
+  <!-- Layer 3 — hidden (purple) -->
   <g class="nl3 hidden">
     <circle cx="145" cy="130" r="5.5" fill="#bb9af7" stroke="#1a1b26" stroke-width="1.5"/>
     <circle cx="145" cy="200" r="5.5" fill="#bb9af7" stroke="#1a1b26" stroke-width="1.5"/>
     <circle cx="145" cy="265" r="5.5" fill="#bb9af7" stroke="#1a1b26" stroke-width="1.5"/>
   </g>
 
-  <!-- L4 — output (green) -->
+  <!-- Layer 4 — output (green) -->
   <g class="nl4 hidden">
     <circle cx="185" cy="155" r="6" fill="#9ece6a" stroke="#1a1b26" stroke-width="1.5"/>
     <circle cx="185" cy="245" r="6" fill="#9ece6a" stroke="#1a1b26" stroke-width="1.5"/>
   </g>
 
-  <!-- Pulsing overlay (all nodes breathe together after load) -->
+  <!-- Idle pulse overlay (all layers) -->
   <g class="npulse hidden">
     <circle cx="35"  cy="95"  r="5.5" fill="#7aa2f7"/>
     <circle cx="35"  cy="140" r="5.5" fill="#7aa2f7"/>
@@ -244,33 +212,37 @@
     <circle cx="185" cy="245" r="6"   fill="#9ece6a"/>
   </g>
 
+  <!-- ============================================================
+       NEOFETCH INFO PANEL
+  ============================================================ -->
 
-  <!-- ══════════════════════════════════════════
-       INFO PANEL
-       ══════════════════════════════════════════ -->
-
+  <!-- username @ hostname -->
   <g class="nf-l0 hidden">
-    <text x="210" y="90"  class="red">anisa</text>
-    <text x="255" y="90"  class="dim">@</text>
-    <text x="266" y="90"  class="red">arch</text>
+    <text x="210" y="90" class="red">anisa</text>
+    <text x="255" y="90" class="dim">@</text>
+    <text x="266" y="90" class="red">arch</text>
   </g>
 
+  <!-- separator -->
   <g class="nf-l1 hidden">
     <text x="210" y="110" class="dim">──────────────────────</text>
   </g>
 
+  <!-- OS -->
   <g class="nf-l2 hidden">
     <text x="210" y="131" class="blue">OS        </text>
     <text x="313" y="131" class="dim">: </text>
     <text x="326" y="131" class="white">Data Science Student</text>
   </g>
 
+  <!-- Location -->
   <g class="nf-l3 hidden">
     <text x="210" y="152" class="blue">Location  </text>
     <text x="313" y="152" class="dim">: </text>
     <text x="326" y="152" class="white">Bari, Italy</text>
   </g>
 
+  <!-- Shell / languages -->
   <g class="nf-l4 hidden">
     <text x="210" y="173" class="blue">Shell     </text>
     <text x="313" y="173" class="dim">: </text>
@@ -281,30 +253,35 @@
     <text x="422" y="173" class="yellow">Scala</text>
   </g>
 
+  <!-- Packages / libraries -->
   <g class="nf-l5 hidden">
     <text x="210" y="194" class="blue">Packages  </text>
     <text x="313" y="194" class="dim">: </text>
     <text x="326" y="194" class="white">sklearn · tidyverse · spark · QGIS</text>
   </g>
 
+  <!-- WM / IDEs -->
   <g class="nf-l6 hidden">
     <text x="210" y="215" class="blue">WM        </text>
     <text x="313" y="215" class="dim">: </text>
     <text x="326" y="215" class="purple">VS Code · Jupyter · RStudio</text>
   </g>
 
+  <!-- Focus -->
   <g class="nf-l7 hidden">
     <text x="210" y="236" class="blue">Focus     </text>
     <text x="313" y="236" class="dim">: </text>
     <text x="326" y="236" class="purple">ML · Statistics · Graphs</text>
   </g>
 
+  <!-- Uptime / status -->
   <g class="nf-l8 hidden">
     <text x="210" y="257" class="blue">Uptime    </text>
     <text x="313" y="257" class="dim">: </text>
     <text x="326" y="257" class="green">open to work &amp; research</text>
   </g>
 
+  <!-- Hobbies -->
   <g class="nf-l9 hidden">
     <text x="210" y="278" class="blue">Hobbies   </text>
     <text x="313" y="278" class="dim">: </text>
@@ -313,12 +290,14 @@
     <text x="399" y="278" class="yellow">painting</text>
   </g>
 
+  <!-- Contact -->
   <g class="nf-l10 hidden">
     <text x="210" y="299" class="blue">Contact   </text>
     <text x="313" y="299" class="dim">: </text>
     <text x="326" y="299" class="cyan">anisabakiu1@icloud.com</text>
   </g>
 
+  <!-- Color swatches -->
   <g class="nf-l11 hidden">
     <rect x="210" y="315" width="16" height="16" rx="3" fill="#f7768e"/>
     <rect x="230" y="315" width="16" height="16" rx="3" fill="#e0af68"/>
@@ -330,16 +309,14 @@
     <rect x="350" y="315" width="16" height="16" rx="3" fill="#565f89"/>
   </g>
 
-
-  <!-- ══════════════════════════════════════════
-       SECOND PROMPT + CURSOR
-       ══════════════════════════════════════════ -->
-
+  <!-- ============================================================
+       SECOND PROMPT + BLINKING CURSOR
+  ============================================================ -->
   <g class="prompt2 hidden">
     <text x="20"  y="378" class="green">anisa@arch</text>
     <text x="113" y="378" class="blue"> ~</text>
     <text x="130" y="378" class="white"> $ </text>
   </g>
-  <rect x="153" y="365" width="8" height="14" class="cur2 hidden"/>
+  <rect x="153" y="365" width="8" height="14" class="cur2 hidden white"/>
 
 </svg>
